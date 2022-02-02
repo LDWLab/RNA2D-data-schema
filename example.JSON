@@ -1,0 +1,93 @@
+{
+    "rna complexes": [
+        {
+            "name": "DR",
+            "rna molecules": [
+                {
+                    "name": "DR",
+                    "sequenceFont": {
+                        "size": 8,
+                        "family": "Helvetica",
+                        "style": "normal",
+                        "weight": "normal"
+                    },
+                    "sequence": [
+                        {
+                            "resId": 0,
+                            "resName": "A",
+                            "x": 0,
+                            "y": 1,
+                            "color": {
+                                "red": 0,
+                                "green": 0,
+                                "blue": 255
+                            }
+                        },
+                        {
+                            "resId": 1,
+                            "resName": "C",
+                            "x": 0,
+                            "y": 0,
+                            "color": {
+                                "red": 0,
+                                "green": 0,
+                                "blue": 255
+                            }
+                        },
+                        {
+                            "resId": 2,
+                            "resName": "G",
+                            "x": 0,
+                            "y": 0,
+                            "color": {
+                                "red": 0,
+                                "green": 0,
+                                "blue": 255
+                            }
+                        }
+                    ],
+                    "basePairs": [
+                        {
+                            "resId1": 0,
+                            "resId2": 2,
+                            "basePairType": null
+                        }
+                    ],
+                    "labelContentFont": {
+                        "size": 8,
+                        "family": "Helvetica",
+                        "style": "normal",
+                        "weight": "normal"
+                    },
+                    "labelsAndAnnotations": [
+                        {
+                            "resId": 0,
+                            "labelLine": {
+                                "x1": -1.2,
+                                "x2": -2.3,
+                                "y1": -3.4,
+                                "y2": -4.5,
+                                "strokeWidth": 5,
+                                "color": {
+                                    "red": 0,
+                                    "green": 0,
+                                    "blue": 0
+                                }
+                            },
+                            "labelContent": {
+                                "label": "Foo",
+                                "x": -12.2,
+                                "y": -13.5,
+                                "color": {
+                                    "red": 0,
+                                    "green": 0,
+                                    "blue": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

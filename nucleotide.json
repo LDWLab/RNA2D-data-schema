@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Nucleotide object",
+    "description": "Secondary structure of nucleotides.",
+    "id": "nucleotide.json#",
+    "type": "object",
+    "required": ["resId", "resName", "x", "y", "color"],
+    "additionalProperties": false,
+    "properties": {
+        "resId": {
+            "type": "integer"
+        },
+        "resName": {
+            "type": "string",
+            "enum": ["A", "C", "G", "U"]
+        },
+        "x": {
+            "type": "number"
+        },
+        "y": {
+            "type": "number"
+        },
+        "color": {
+            "$ref": "color.json#"
+        }
+    }
+}

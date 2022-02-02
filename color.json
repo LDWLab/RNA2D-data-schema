@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "RGB color",
+    "description": "A color object defined in terms of three color channels: red, green and blue ([0-255])",
+    "id": "color.json#",
+    "type": "object",
+    "required": ["red", "green", "blue"],
+    "additionalProperties": false,
+    "properties": {
+        "red": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "green": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "blue": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        }
+    }
+}

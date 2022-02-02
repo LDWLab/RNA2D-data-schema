@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Font object.",
+    "description": "Font information for secondary-structure visualization.",
+    "id": "font.json#",
+    "type": "object",
+    "required": ["size", "family", "style", "weight"],
+    "additionalProperties": false,
+    "properties": {
+        "size": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 8
+        },
+        "family": {
+            "type": "string"
+        },
+        "style": {
+            "type": "string",
+            "enum": ["normal", "italic", "oblique"],
+            "default" : "normal"
+        },
+        "weight": {
+            "type": ["string", "integer"],
+            "enum": ["normal", "bold", "bolder", "lighter", 100, 200, 300, 400, 500, 600, 700, 800, 900, "initial", "inherit"],
+            "default" : "normal"
+        }
+    }
+}

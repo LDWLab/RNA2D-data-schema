@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "RNA molecule object",
+    "description": "Secondary structure of RNA molecules.",
+    "id": "rna-molecule.json#",
+    "type": "object",
+    "required": ["name", "sequenceFont", "sequence", "basePairs", "labelContentFont", "labelsAndAnnotations"],
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "A name for this RNA molecule. Preferably, this should be unique among RNA molecules of the same complex."
+        },
+        "sequenceFont": {
+            "$ref": "font.json#"
+        },
+        "sequence": {
+            "type": "array",
+            "items": {
+                "$ref": "nucleotide.json#"
+            }
+        },
+        "basePairs": {
+            "type": "array",
+            "items": {
+                "$ref": "base-pair.json#"
+            }
+        },
+        "labelContentFont": {
+            "$ref": "font.json#"
+        },
+        "labelsAndAnnotations": {
+            "type": "array",
+            "items": {
+                "$ref": "labels-and-annotations.json#"
+            }
+        }
+    }
+}

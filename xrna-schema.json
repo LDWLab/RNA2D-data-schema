@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "XRNA import/export file.",
+    "description": "A file containing RNA secondary-structure data.",
+    "id": "xrna-schema.json#",
+    "type": "object",
+    "required": ["rna complexes"],
+    "properties": {
+        "rna complexes": {
+            "type": "array",
+            "description": "A list of RNA-complex secondary-structure datasets.",
+            "items": {
+                "$ref": "rna-complex.json#"
+            }
+        }
+    } 
+}
