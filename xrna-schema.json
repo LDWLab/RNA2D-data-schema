@@ -4,13 +4,19 @@
     "description": "A file containing RNA secondary-structure data.",
     "id": "xrna-schema.json#",
     "type": "object",
-    "required": ["rna complexes"],
+    "required": ["rnaComplexes", "classes"],
     "properties": {
-        "rna complexes": {
+        "rnaComplexes": {
             "type": "array",
             "description": "A list of RNA-complex secondary-structure datasets.",
             "items": {
                 "$ref": "rna-complex.json#"
+            }
+        },
+        "classes" : {
+            "type": "array",
+            "items": {
+                "$ref": "class.json#"
             }
         }
     } 

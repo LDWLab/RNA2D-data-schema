@@ -4,13 +4,13 @@
     "description": "Base-pairing information which helps define RNA secondary-structure topology.",
     "id": "base-pair.json#",
     "type": "object",
-    "required": ["resId1", "resId2", "basePairType"],
+    "required": ["residueIndex1", "residueIndex2", "basePairType"],
     "additionalProperties": false,
     "properties": {
-        "resId1": {
+        "residueIndex1": {
             "type": "integer"
         },
-        "resId2": {
+        "residueIndex2": {
             "type": "integer"
         },
         "basePairType": {

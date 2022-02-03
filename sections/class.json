@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "A CSS class object",
+    "description": "Contains visual information relevant to rendering XRNA scene elements",
+    "id": "class.json#",
+    "type": "object",
+    "required": ["name"],
+    "additionalProperties": true,
+    "properties": {
+        "name": {
+            "type": "string"
+        }
+    }
+}

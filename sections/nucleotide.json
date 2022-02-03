@@ -4,13 +4,13 @@
     "description": "Secondary structure of nucleotides.",
     "id": "nucleotide.json#",
     "type": "object",
-    "required": ["resId", "resName", "x", "y", "color"],
+    "required": ["residueIndex", "residueName", "x", "y", "classes"],
     "additionalProperties": false,
     "properties": {
-        "resId": {
+        "residueIndex": {
             "type": "integer"
         },
-        "resName": {
+        "residueName": {
             "type": "string",
             "enum": ["A", "C", "G", "U"]
         },
@@ -20,8 +20,11 @@
         "y": {
             "type": "number"
         },
-        "color": {
-            "$ref": "color.json#"
+        "classes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     }
 }

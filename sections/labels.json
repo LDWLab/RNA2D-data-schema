@@ -1,18 +1,18 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Object for labels and annotations.",
-    "description": "Information for nucleotide labeling and annotation.",
-    "id": "labels-and-annotations.json#",
+    "title": "Object for nucleotide labels.",
+    "description": "Information for nucleotide labeling.",
+    "id": "labels.json#",
     "type": "object",
-    "required": ["resId", "labelLine", "labelContent"],
+    "required": ["residueIndex", "labelLine", "labelContent"],
     "additionalProperties": false,
     "properties": {
-        "resId": {
+        "residueIndex": {
             "type": "integer"
         },
         "labelLine": {
             "type": "object",
-            "required": ["x1", "x2", "y1", "y2", "strokeWidth", "color"],
+            "required": ["x1", "x2", "y1", "y2", "classes"],
             "additionalProperties": false,
             "properties": {
                 "x1": {
@@ -27,18 +27,17 @@
                 "y2": {
                     "type": "number"
                 },
-                "strokeWidth": {
-                    "type": "number",
-                    "minimum": 0
-                },
-                "color": {
-                    "$ref": "color.json#"
+                "classes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             }
         },
         "labelContent": {
             "type": "object",
-            "required": ["label", "x", "y", "color"],
+            "required": ["label", "x", "y", "classes"],
             "additionalProperties": false,
             "properties": {
                 "label": {
@@ -50,8 +49,11 @@
                 "y": {
                     "type": "number"
                 },
-                "color": {
-                    "$ref": "color.json#"
+                "classes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             }
         }
