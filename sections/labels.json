@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema",
     "title": "Object for nucleotide labels.",
     "description": "Information for nucleotide labeling.",
-    "id": "labels.json#",
+    "id": "labels.json",
     "type": "object",
     "required": ["residueIndex", "labelLine", "labelContent"],
     "additionalProperties": false,
@@ -29,6 +29,7 @@
                 },
                 "classes": {
                     "type": "array",
+                    "description": "Defines the color and stroke properties of this line object.",
                     "items": {
                         "type": "string"
                     }
@@ -51,6 +52,7 @@
                 },
                 "classes": {
                     "type": "array",
+                    "description": "Defines the color and stroke properties of this text object.",
                     "items": {
                         "type": "string"
                     }

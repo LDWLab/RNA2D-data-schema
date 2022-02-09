@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema",
     "title": "Nucleotide object",
     "description": "Secondary structure of nucleotides.",
-    "id": "nucleotide.json#",
+    "id": "nucleotide.json",
     "type": "object",
     "required": ["residueIndex", "residueName", "x", "y", "classes"],
     "additionalProperties": false,

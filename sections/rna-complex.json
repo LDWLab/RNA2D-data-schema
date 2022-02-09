@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "RNA complex object",
     "description": "Secondary structure of RNA complexes.",
-    "id": "rna-complex.json#",
+    "id": "rna-complex.json",
     "type": "object",
     "required": ["name", "rnaMolecules"],
     "additionalProperties": false,
@@ -15,8 +15,9 @@
             "type": "array",
             "description": "A list of RNA-molecule secondary-structure datasets.",
             "items": {
-                "$ref": "rna-molecule.json#"
-            }
+                "$ref": "rna-molecule.json"
+            },
+            "minItems": 1
         }
     }
 }

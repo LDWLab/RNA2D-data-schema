@@ -1,17 +1,19 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema",
     "title": "Base-pair object.",
     "description": "Base-pairing information which helps define RNA secondary-structure topology.",
-    "id": "base-pair.json#",
+    "id": "base-pair.json",
     "type": "object",
     "required": ["residueIndex1", "residueIndex2", "basePairType"],
     "additionalProperties": false,
     "properties": {
         "residueIndex1": {
-            "type": "integer"
+            "type": "integer",
+            "minimum": 0
         },
         "residueIndex2": {
-            "type": "integer"
+            "type": "integer",
+            "minimum": 0
         },
         "basePairType": {
             "type": ["string", "null"],
