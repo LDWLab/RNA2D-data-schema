@@ -3,12 +3,25 @@ import json
 import logging
 import click
 from collections import Counter
-import jsonschema as js
+import jsonschema as js 
+from jsonschema import Draft202012Validator
+from pathlib import Path
+
+from referencing import Registry, Resource
+from referencing.exceptions import NoSuchResource
 
 HERE = os.path.abspath(os.path.dirname(__file__))
-SECTIONS = os.path.join(HERE, 'sections')
 SCHEMA_NAME = 'xrna-schema.json'
+SCHEMAS = Path("./sections")
 LOGGER = logging.getLogger(__name__)
+
+def retrieve_from_filesystem(uri):
+    expected_prefix = "http://localhost/"
+    if not uri.startswith(expected_prefix):
+        raise NoSuchResource(ref=uri)
+    path = SCHEMAS / Path(uri.removeprefix(expected_prefix))
+    contents = json.loads(path.read_text())
+    return Resource.from_contents(contents)
 
 # 1. Validates that there are no repeated nucleotide (residue) indices per RNA molecule.
 # 2. Validates that there are no gaps betwwen nucleotide indices per RNA molecule.
@@ -86,15 +99,14 @@ def validate_classes(data):
         if not seen_class in classes:
             yield js.ValidationError("All referenced classes must be defined within the top-level \"classes\" array.")
 
-def validate(data, schema_path, sections_path):
-    with open(schema_path, 'r') as raw:
-        schema = json.load(raw)
+def validate(data, schema_path):
+    registry = Registry(retrieve=retrieve_from_filesystem)
 
-    base = 'file://%s/' % sections_path
-    validator = js.Draft4Validator(
+    with open(schema_path, "r") as raw:
+        schema = json.load(raw)
+    validator = Draft202012Validator(
         schema,
-        format_checker=js.FormatChecker(),
-        resolver=js.RefResolver(base, None),
+        registry=registry
     )
 
     found = False
@@ -124,13 +136,11 @@ def validate(data, schema_path, sections_path):
 @click.argument('filename')
 @click.option('--schema', default=SCHEMA_NAME,
               help='Filename of the schema to use')
-@click.option('--sections', default=SECTIONS,
-              help='Directory where schema parts are kept')
-def main(filename, schema=None, sections=None):
+def main(filename, schema=None):
     with open(filename, 'r') as raw:
         data = json.load(raw)
 
-    validate(data, schema, os.path.abspath(sections))
+    validate(data, schema)
 
 if __name__ == '__main__':
 

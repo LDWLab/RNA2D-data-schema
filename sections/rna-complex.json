@@ -15,7 +15,7 @@
             "type": "array",
             "description": "A list of RNA-molecule secondary-structure datasets.",
             "items": {
-                "$ref": "rna-molecule.json"
+                "$ref": "http://localhost/rna-molecule.json"
             },
             "minItems": 1
         }

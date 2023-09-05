@@ -14,21 +14,21 @@
         "sequence": {
             "type": "array",
             "items": {
-                "$ref": "nucleotide.json"
+                "$ref": "http://localhost/nucleotide.json"
             },
             "minItems": 1
         },
         "basePairs": {
             "type": "array",
             "items": {
-                "$ref": "base-pair.json"
+                "$ref": "http://localhost/base-pair.json"
             },
             "minItems": 1
         },
         "labels": {
             "type": "array",
             "items": {
-                "$ref": "labels.json"
+                "$ref": "http://localhost/labels.json"
             }
         }
     }

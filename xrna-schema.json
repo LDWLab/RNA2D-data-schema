@@ -10,14 +10,14 @@
             "type": "array",
             "description": "A list of RNA-complex secondary-structure datasets.",
             "items": {
-                "$ref": "rna-complex.json"
+                "$ref": "http://localhost/rna-complex.json"
             },
             "minItems": 1
         },
         "classes" : {
             "type": "array",
             "items": {
-                "$ref": "class.json"
+                "$ref": "http://localhost/class.json"
             }
         }
     } 
