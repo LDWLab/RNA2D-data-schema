@@ -30,6 +30,24 @@
             "items": {
                 "$ref": "http://localhost/labels.json"
             }
+        },
+        "classesForSequence" : {
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        },
+        "classesForLabels" : {
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        },
+        "classesForBasePairs" : {
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
         }
     }
 }

@@ -80,14 +80,14 @@ def validate_classes(data):
                 for class_ in classes:
                     seen_classes.add(class_)
             labels = rna_molecule.get("labels", [])
-            for label in labels:
-                if "labelLine" in label:
-                    label_line = label["labelLine"]
+            for class_ in labels:
+                if "labelLine" in class_:
+                    label_line = class_["labelLine"]
                     classes = label_line.get("classes", [])
                     for class_ in classes:
                         seen_classes.add(class_)
-                if "labelContent" in label:
-                    label_content = label["labelContent"]
+                if "labelContent" in class_:
+                    label_content = class_["labelContent"]
                     classes = label_content.get("classes", [])
                     for class_ in classes:
                         seen_classes.add(class_)
@@ -96,6 +96,15 @@ def validate_classes(data):
                 classes = basePair.get("classes", [])
                 for class_ in classes:
                     seen_classes.add(class_)
+            classes_for_sequence = rna_molecule.get("classesForSequence", [])
+            for class_ in classes_for_sequence:
+                seen_classes.add(class_)
+            classes_for_labels = rna_molecule.get("classesForLabels", [])
+            for class_ in classes_for_labels:
+                seen_classes.add(class_)
+            classes_for_base_pairs = rna_molecule.get("classesForBasePairs", [])
+            for class_ in classes_for_base_pairs:
+                seen_classes.add(class_)
     classes = set()
     for class_ in data.get("classes", []):
         if "name" in class_:

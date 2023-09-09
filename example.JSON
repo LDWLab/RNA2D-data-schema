@@ -81,6 +81,15 @@
                                 "classes": []
                             }
                         }
+                    ],
+                    "classesForSequence" : [
+                        "a"
+                    ],
+                    "classesForLabels" : [
+                        "text-blue"
+                    ],
+                    "classesForBasePairs" : [
+                        "pink"
                     ]
                 }
             ]
@@ -89,10 +98,14 @@
     "classes": [
         {
             "name": "a",
-            "stroke" : "pink"
+            "stroke" : "green"
         },
         {
             "name": "text-blue"
+        },
+        {
+            "name" : "pink",
+            "color" : "pink"
         }
     ]
 }
