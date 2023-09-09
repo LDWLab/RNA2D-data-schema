@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Poly-line object.",
+    "description": "A series of vertices specifying a curved line.",
+    "id": "poly-line.json",
+    "type": "array",
+    "items": {
+        "required": ["x", "y"],
+        "additionalProperties": false,
+        "properties": {
+            "x" : {
+                "type": "number"
+            },
+            "y" : {
+                "type": "number"
+            }
+        }
+    }
+}

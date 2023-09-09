@@ -18,6 +18,11 @@
         "basePairType": {
             "type": ["string", "null"],
             "enum": [null, "canonical", "wobble", "mismatch"]
+        },
+        "info" : {
+            "type" : "object",
+            "properties" : {},
+            "additionalProperties": true
         }
     }
 }

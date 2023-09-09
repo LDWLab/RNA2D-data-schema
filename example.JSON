@@ -25,14 +25,20 @@
                             "residueName": "G",
                             "x": 0,
                             "y": 0,
-                            "classes": ["b", "a"]
+                            "classes": ["b", "a"],
+                            "info" : {
+                                "foo" : "bar"
+                            }
                         }
                     ],
                     "basePairs": [
                         {
                             "residueIndex1": 0,
                             "residueIndex2": 2,
-                            "basePairType": null
+                            "basePairType": null,
+                            "info" : {
+                                "Pooh" : "Bear"
+                            }
                         }
                     ],
                     "labels": [

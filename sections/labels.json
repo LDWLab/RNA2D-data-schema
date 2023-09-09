@@ -17,21 +17,7 @@
             "additionalProperties": false,
             "properties": {
                 "points": {
-                    "type" : "array",
-                    "description": "a list of vertices in a label line",
-                    "items" : {
-                        "type": "object",
-                        "required": ["x", "y"],
-                        "additionalProperties": false,
-                        "properties": {
-                            "x" : {
-                                "type": "number"
-                            },
-                            "y" : {
-                                "type": "number"
-                            }
-                        }
-                    }
+                    "$ref": "http://localhost/poly-line.json"
                 },
                 "classes": {
                     "type": "array",
