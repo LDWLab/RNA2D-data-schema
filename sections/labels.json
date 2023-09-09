@@ -4,7 +4,7 @@
     "description": "Information for nucleotide labeling.",
     "id": "labels.json",
     "type": "object",
-    "required": ["residueIndex", "labelLine", "labelContent"],
+    "required": ["residueIndex"],
     "additionalProperties": false,
     "properties": {
         "residueIndex": {
