@@ -23,6 +23,15 @@
             "type" : "object",
             "properties" : {},
             "additionalProperties": true
+        },
+        "points" : {
+            "$ref": "http://localhost/poly-line.json"
+        },
+        "classes" : {
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
         }
     }
 }

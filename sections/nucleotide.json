@@ -4,7 +4,7 @@
     "description": "Secondary structure of nucleotides.",
     "id": "nucleotide.json",
     "type": "object",
-    "required": ["residueIndex", "residueName", "x", "y", "classes"],
+    "required": ["residueIndex", "residueName", "x", "y"],
     "additionalProperties": false,
     "properties": {
         "residueIndex": {
@@ -25,7 +25,8 @@
             "type": "array",
             "items": {
                 "type": "string"
-            }
+            },
+            "description": "Defines the color and stroke properties of this text nucleotide."
         },
         "info" : {
             "type" : "object",

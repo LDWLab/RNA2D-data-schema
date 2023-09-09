@@ -91,6 +91,11 @@ def validate_classes(data):
                     classes = label_content.get("classes", [])
                     for class_ in classes:
                         seen_classes.add(class_)
+            basePairs = rna_molecule.get("basePairs", [])
+            for basePair in basePairs:
+                classes = basePair.get("classes", [])
+                for class_ in classes:
+                    seen_classes.add(class_)
     classes = set()
     for class_ in data.get("classes", []):
         if "name" in class_:

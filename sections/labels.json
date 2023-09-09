@@ -13,7 +13,7 @@
         },
         "labelLine": {
             "type": "object",
-            "required": ["points", "classes"],
+            "required": ["points"],
             "additionalProperties": false,
             "properties": {
                 "points": {
@@ -21,16 +21,16 @@
                 },
                 "classes": {
                     "type": "array",
-                    "description": "Defines the color and stroke properties of this line object.",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "description": "Defines the color and stroke properties of this line object."
                 }
             }
         },
         "labelContent": {
             "type": "object",
-            "required": ["label", "x", "y", "classes"],
+            "required": ["label", "x", "y"],
             "additionalProperties": false,
             "properties": {
                 "label": {
@@ -44,10 +44,10 @@
                 },
                 "classes": {
                     "type": "array",
-                    "description": "Defines the color and stroke properties of this text object.",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "description": "Defines the color and stroke properties of this text object."
                 }
             }
         }
