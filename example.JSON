@@ -18,14 +18,14 @@
                             "residueName": "C",
                             "x": 10,
                             "y": 0,
-                            "classes": ["a"]
+                            "classes": ["b"]
                         },
                         {
                             "residueIndex": 2,
                             "residueName": "G",
                             "x": 0,
                             "y": 0,
-                            "classes": ["text-blue", "a"],
+                            "classes": ["b", "text-blue"],
                             "info" : {
                                 "foo" : "bar"
                             }
@@ -53,9 +53,7 @@
                                     "y" : 100
                                 }
                             ],
-                            "classes" : [
-                                "a"
-                            ]
+                            "classes" : []
                         }
                     ],
                     "labels": [
@@ -86,7 +84,7 @@
                         "a"
                     ],
                     "classesForLabels" : [
-                        "text-blue"
+                        "text-purple"
                     ],
                     "classesForBasePairs" : [
                         "pink"
@@ -98,7 +96,11 @@
     "classes": [
         {
             "name": "a",
-            "stroke" : "green"
+            "color" : "orange"
+        },
+        {
+            "name" : "b",
+            "color" : "red"
         },
         {
             "name": "text-blue"
