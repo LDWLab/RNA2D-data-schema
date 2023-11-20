@@ -48,6 +48,11 @@
             "items" : {
                 "type" : "string"
             }
+        },
+        "info" : {
+            "type" : "object",
+            "properties" : {},
+            "additionalProperties": true
         }
     }
 }
