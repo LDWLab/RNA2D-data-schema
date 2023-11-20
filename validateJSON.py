@@ -1,6 +1,7 @@
 import os
 import json
 import logging
+import re
 import click
 from collections import Counter
 import jsonschema as js 
@@ -110,7 +111,7 @@ def validate_classes(data):
         if "name" in class_:
             classes.add(class_["name"])
     for seen_class in seen_classes:
-        if not seen_class in classes:
+        if not seen_class in classes and not re.match("^text-", seen_class):
             yield js.ValidationError("All referenced classes must be defined within the top-level \"classes\" array.")
 
 def validate(data, schema_path):

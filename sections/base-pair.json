@@ -15,9 +15,32 @@
             "type": "integer",
             "minimum": 0
         },
+        "rnaMoleculeName1": {
+            "type": "string"
+        },
+        "rnaMoleculeName2" : {
+            "type": "string"
+        },
         "basePairType": {
             "type": ["string", "null"],
-            "enum": [null, "canonical", "wobble", "mismatch"]
+            "enum": [
+                null,
+                "canonical",
+                "wobble",
+                "mismatch",
+                "cis_watson_crick_watson_crick",
+                "trans_watson_crick_watson_crick",
+                "cis_watson_crick_hoogsteen",
+                "trans_watson_crick_hoogsteen",
+                "cis_watson_crick_sugar_edge",
+                "trans_watson_crick_sugar_edge",
+                "cis_hoogsteen_hoogsteen",
+                "trans_hoogsteen_hoogsteen",
+                "cis_hoogsteen_sugar_edge",
+                "trans_hoogsteen_sugar_edge",
+                "cis_sugar_edge_sugar_edge",
+                "trans_sugar_edge_sugar_edge"
+            ]
         },
         "info" : {
             "type" : "object",
