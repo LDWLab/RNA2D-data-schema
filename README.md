@@ -12,6 +12,7 @@ The following information can currently be stored:
 
 - nucleotide sequence
 - (x, y) coordinates of each nucleotides
+- RNA base pairs with the support of Westhof-Leontis schema 
 - labels and classes can be optionally attached to each nucleotide
 
 A script can be used to validate a JSON file and ensure that the data is formatted correctly.
